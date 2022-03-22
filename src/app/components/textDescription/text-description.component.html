@@ -1,0 +1,16 @@
+
+<ng-container *ngIf="(text$|async) as text">
+
+<pre>
+  {{ text.getText() }}
+</pre>
+  <a routerLink="/text"> Submit another text</a>
+<table>
+  <tr *ngFor="let word of text.getWords()">
+    <td> {{word.getWord()}} </td>
+    <td> {{word.getCount()}} </td>
+    <td> {{starsDesc.get(word.getStars())}} </td>
+  </tr>
+</table>
+
+</ng-container>

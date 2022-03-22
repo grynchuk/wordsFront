@@ -1,0 +1,13 @@
+
+<form
+  [formGroup]="form"
+  (ngSubmit)="addText()"
+>
+  <h2>Text</h2>
+
+  <label for="text">Street: </label>
+  <textarea id="text"  formControlName="text"></textarea>
+
+  <button type="submit" [disabled]="!form.valid">Submit</button>
+
+</form>
